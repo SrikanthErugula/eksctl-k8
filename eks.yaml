@@ -4,7 +4,7 @@ kind: ClusterConfig
 metadata:
     name: roboshop-dev  # cluster name
     region: us-east-1
-managedNodeGroups:
+managedNodeGroups:  # it means 
   - name: roboshop-dev
     instanceTypes: ["m5.large", "c3.large","c4.large","c5.large",]
     desiredCapacity: 3 #  by default this value is 3
