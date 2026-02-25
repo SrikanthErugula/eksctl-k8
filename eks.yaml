@@ -8,6 +8,7 @@ metadata:
     region: us-east-1
 managedNodeGroups:  # it means 
   - name: roboshop-dev
-    instanceTypes: ["m5.large", "c3.large","c4.large","t3.micro",]
-    desiredCapacity: 3 #  by default this value is 3
+    # instanceTypes: ["m5.large", "c3.large","c4.large","t3.micro",]
+    instanceTypes: ["t2.small", "t2.micro","t3.small","t3.micro",]
+    desiredCapacity: 2 #  by default this value is 3
     spot: true
