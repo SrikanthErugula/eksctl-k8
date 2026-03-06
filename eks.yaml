@@ -26,3 +26,5 @@ managedNodeGroups:
     instanceTypes: ["m5.large", "t3.large","t3a.large","m5a.large"]
     desiredCapacity: 3 #  by default this value is 3
     spot: true
+
+    
