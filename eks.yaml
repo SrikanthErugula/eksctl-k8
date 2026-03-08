@@ -15,16 +15,27 @@
 
 
 
+# apiVersion: eksctl.io/v1alpha5
+# kind: ClusterConfig
+# metadata:
+#     name: roboshop-dev
+#     region: us-east-1
+# managedNodeGroups:
+#   - name: roboshop-dev
+#     # instanceTypes: ["m5.large", "c3.large","c4.large","c5.large"]
+#     instanceTypes: ["m5.large", "t3.large","t3a.large","m5a.large"]
+#     desiredCapacity: 3 #  by default this value is 3
+#     spot: true
+
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
-metadata:
-    name: roboshop-dev
-    region: us-east-1
-managedNodeGroups:
-  - name: roboshop-dev
-    # instanceTypes: ["m5.large", "c3.large","c4.large","c5.large"]
-    instanceTypes: ["m5.large", "t3.large","t3a.large","m5a.large"]
-    desiredCapacity: 3 #  by default this value is 3
-    spot: true
 
-    
+metadata:
+  name: roboshop-cluster
+  region: us-east-1
+
+managedNodeGroups:
+- name: roboshop
+  instanceType: m5.large
+  desiredCapacity: 3
+  spot: true
