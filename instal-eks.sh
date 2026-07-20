@@ -23,24 +23,24 @@ sudo xfs_growfs /var
 
 #installing docker
 
-#check whether root user or not
-R="\e[31m"
-N="\e[0m"
+# #check whether root user or not
+# R="\e[31m"
+# N="\e[0m"
 
-yum install -y yum-utils
-yum-config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo
-yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
-systemctl start docker
-systemctl enable docker
-usermod -aG docker ec2-user
-echo -e "$R Logout and Login again $N"
+# yum install -y yum-utils
+# yum-config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo
+# yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+# systemctl start docker
+# systemctl enable docker
+# usermod -aG docker ec2-user
+# echo -e "$R Logout and Login again $N"
 
-#installing helm
-curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-4
-chmod 700 get_helm.sh
-./get_helm.sh
+# #installing helm
+# curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-4
+# chmod 700 get_helm.sh
+# ./get_helm.sh
 
-#installing kubens
-sudo git clone https://github.com/ahmetb/kubectx /opt/kubectx
-sudo ln -s /opt/kubectx/kubens /usr/local/bin/kubens
-sudo ln -s /opt/kubectx/kubectx /usr/local/bin/kubectx
+# #installing kubens
+# sudo git clone https://github.com/ahmetb/kubectx /opt/kubectx
+# sudo ln -s /opt/kubectx/kubens /usr/local/bin/kubens
+# sudo ln -s /opt/kubectx/kubectx /usr/local/bin/kubectx
